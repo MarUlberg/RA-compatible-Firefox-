@@ -9,7 +9,7 @@
       "id": "ra-checker@yourname",
       "strict_min_version": "142.0",
       "data_collection_permissions": {
-        "privacy_policy": "https://github.com/MarUlberg/RA-compatible/blob/main/privacy-policy.md",
+        "privacy_policy": "https://raw.githubusercontent.com/MarUlberg/RA-compatible-Firefox-/refs/heads/main/privacy-policy.md",
         "data_types": [],
         "required": ["none"]
       }
