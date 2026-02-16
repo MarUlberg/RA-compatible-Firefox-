@@ -1,0 +1,77 @@
+{
+  "manifest_version": 2,
+  "name": "RA compatible",
+  "version": "1.1",
+  "description": "Marks ROMs compatible with RetroAchievements on Myrient and archive.org",
+
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "ra-checker@yourname",
+      "strict_min_version": "142.0",
+      "data_collection_permissions": {
+        "privacy_policy": "https://github.com/MarUlberg/RA-compatible/blob/main/privacy-policy.md",
+        "data_types": [],
+        "required": ["none"]
+      }
+    }
+  },
+
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "48": "icon.png",
+    "128": "iconx128.png"
+  },
+
+  "permissions": [
+    "*://myrient.erista.me/*",
+    "*://archive.org/*"
+  ],
+
+  "content_scripts": [
+    {
+      "matches": [
+        "*://myrient.erista.me/*",
+        "*://archive.org/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": [
+    "icon.png",
+
+    "ra-sega-gamegear-files.json",
+    "ra-sega-mastersystem-files.json",
+    "ra-sega-megadrive-files.json",
+    "ra-sega-cd-files.json",
+    "ra-sega-32x-files.json",
+    "ra-sega-saturn-files.json",
+    "ra-sega-dreamcast-files.json",
+
+    "ra-sony-playstation-files.json",
+    "ra-sony-playstation2-files.json",
+    "ra-sony-playstationportable-files.json",
+
+    "ra-nintendo-gb-files.json",
+    "ra-nintendo-gbc-files.json",
+    "ra-nintendo-gba-files.json",
+    "ra-nintendo-ds-files.json",
+    "ra-nintendo-dsi-files.json",
+    "ra-nintendo-nes-files.json",
+    "ra-nintendo-snes-files.json",
+    "ra-nintendo-vb-files.json",
+    "ra-nintendo-n64-files.json",
+    "ra-nintendo-ngc-files.json",
+
+	"ra-3do-interactive-multiplayer-files.json",
+	"ra-atari-2600-files.json",
+	"ra-atari-7800-files.json",
+	"ra-atari-jaguar-files.json",
+	"ra-atari-jaguar-cd-files.json",
+	"ra-neogeo-cd-files.json",
+	"ra-pc-engine-cd-turbografx-cd-files.json",
+	"ra-pc-engine-turbografx-16-files.json"
+  ]
+}
